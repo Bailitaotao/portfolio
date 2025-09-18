@@ -2,7 +2,7 @@
 
 ## INSPIRATION
 
-![cover](../../assets/images/game-design/delete-me-not/cover.jpg)
+![cover](../assets/images/game-design/delete-me-not/cover.jpg)
 
 My inspiration comes from the explosive development of AI in recent years. AI-generated advertisements and videos have already permeated our lives, and my encounter with the AI detection system while completing my thesis allowed me to experience a cold, machine logic—it only recognizes data patterns but fails to understand human intentions. I can't help but worry about how, in the near future, a society that exists for absolute efficiency will handle "inefficient" human individuals. Therefore, in this project, my team and I hope to develop a game to explore the dialectical relationship between AI and human society.
 
@@ -64,7 +64,7 @@ The core experience of the game revolves around a recurring binary choice: to **
   <tr>
     <!-- 左侧图片单元格 -->
     <td style="width: 120px; vertical-align: top; border: none;">
-      <img src="../../../assets/images/game-design/delete-me-not/haoyang-tao.png" alt="Haoyang Tao" style="width: 100%;">
+  <img src="../../assets/images/game-design/delete-me-not/haoyang-tao.png" alt="Haoyang Tao" style="width: 100%;">
     </td>
     <!-- 右侧文字单元格，现在名字和职责都在这里 -->
     <td style="vertical-align: middle; border: none;">
@@ -77,7 +77,7 @@ The core experience of the game revolves around a recurring binary choice: to **
   <tr>
     <!-- 左侧图片单元格 -->
     <td style="width: 120px; vertical-align: top; border: none;">
-      <img src="../../../assets/images/game-design/delete-me-not/tong_shi.png" alt="Tong Shi" style="width: 100%;">
+  <img src="../../assets/images/game-design/delete-me-not/tong_shi.png" alt="Tong Shi" style="width: 100%;">
     </td>
     <!-- 右侧文字单元格 -->
     <td style="vertical-align: middle; border: none;">
@@ -91,7 +91,7 @@ The core experience of the game revolves around a recurring binary choice: to **
 
 ## Storyboard
 
-![storyboard](../../assets/images/game-design/delete-me-not/storyboard.png)
+![storyboard](../assets/images/game-design/delete-me-not/storyboard.png)
 
 ---
 
@@ -101,7 +101,7 @@ To implement the game's core gameplay and interactive experience, we designed a 
 
 ### Core Interaction Logic
 
-![BP_FirstPersonCharacter-line-trace](../../assets/images/game-design/delete-me-not/blueprints/BP_FirstPersonCharacter-line-trace.png)
+![BP_FirstPersonCharacter-line-trace](../assets/images/game-design/delete-me-not/blueprints/BP_FirstPersonCharacter-line-trace.png)
 
 Player interaction with the world is achieved through a Line-Trace. The system casts a ray forward from the player's camera position:
 
@@ -111,18 +111,18 @@ Triggering Interaction: When the player presses the interact key, the interactio
 
 ### Item Interaction & Parent-Child Blueprint Structure
 
-![BP_ItemBase](../../assets/images/game-design/delete-me-not/blueprints/BP_ItemBase.png)
+![BP_ItemBase](../assets/images/game-design/delete-me-not/blueprints/BP_ItemBase.png)
 
 To uniformly manage all interactable items in the scene, we created a parent Blueprint class called BP_ItemBase. All specific items (like diaries, photos, etc.) inherit from this base class.
 
 Common Functionality: In BP_ItemBase, we implement functionalities common to all items, such as highlighting and de-highlighting when targeted by the player's line trace.
 Specialized Extension: Specific child Blueprints, such as BP_Inspecteditem, inherit the parent's functionality while adding their own unique interaction logic. For example, when the player interacts with a BP_Inspecteditem, the system generates a UI to display its details, passing the item's name, description, and 3D model to the UI.
 
-![BP_Inspecteditem-1](../../assets/images/game-design/delete-me-not/blueprints/BP_Inspecteditem-1.png)
+![BP_Inspecteditem-1](../assets/images/game-design/delete-me-not/blueprints/BP_Inspecteditem-1.png)
 
-![BP_Inspecteditem-2](../../assets/images/game-design/delete-me-not/blueprints/BP_Inspecteditem-2.png)
+![BP_Inspecteditem-2](../assets/images/game-design/delete-me-not/blueprints/BP_Inspecteditem-2.png)
 
-![BP_Inspecteditem-3](../../assets/images/game-design/delete-me-not/blueprints/BP_Inspecteditem-3.png)
+![BP_Inspecteditem-3](../assets/images/game-design/delete-me-not/blueprints/BP_Inspecteditem-3.png)
 
 For inspectable items, we also designed a complete "pick up/put down" and "rotate/examine" interaction flow:
 
@@ -131,11 +131,11 @@ Rotation and Zoom: In inspection mode, the player can use the mouse to freely ro
 
 ### Dialogue System & UI Interaction
 
-![BPI_ScreenMsg](../../assets/images/game-design/delete-me-not/blueprints/BPI_ScreenMsg.png)
+![BPI_ScreenMsg](../assets/images/game-design/delete-me-not/blueprints/BPI_ScreenMsg.png)
 
-![BP_FirstPersonCharacter-dialogue](../../assets/images/game-design/delete-me-not/blueprints/BP_FirstPersonCharacter-dialogue.png)
+![BP_FirstPersonCharacter-dialogue](../assets/images/game-design/delete-me-not/blueprints/BP_FirstPersonCharacter-dialogue.png)
 
-![BPI_UserDecision](../../assets/images/game-design/delete-me-not/blueprints/BPI_UserDecision.png)
+![BPI_UserDecision](../assets/images/game-design/delete-me-not/blueprints/BPI_UserDecision.png)
 
 Dialogue is central to driving the game's narrative. Our dialogue system is tightly integrated with the UI:
 
@@ -146,7 +146,7 @@ Restoring Control: Once the dialogue ends (either by the player clicking "contin
 
 ### Game State Management (Pause & Resume)
 
-![BP_FirstPersonCharacter-game-pause](../../assets/images/game-design/delete-me-not/blueprints/BP_FirstPersonCharacter-game-pause.png)
+![BP_FirstPersonCharacter-game-pause](../assets/images/game-design/delete-me-not/blueprints/BP_FirstPersonCharacter-game-pause.png)
 
 To provide a better gameplay experience, we designed a simple game pause mechanism:
 
@@ -156,7 +156,7 @@ Resuming Game: When the player clicks the "Resume" button, the pause menu UI is 
 
 ### Scene Interactive Elements (Doors)
 
-![BP_Door](../../assets/images/game-design/delete-me-not/blueprints/BP_Door.png)
+![BP_Door](../assets/images/game-design/delete-me-not/blueprints/BP_Door.png)
 Doors are a typical interactive element in the scene, and their open/close logic is implemented using a Timeline:
 
 Key Trigger: The player presses a designated key (e.g., "E") to trigger the door's open/close event.

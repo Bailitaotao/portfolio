@@ -1,4 +1,4 @@
-site_name: Timothy's portfolio
+site_name: Timothy's Portfolio
 site_url: https://portfolio.bailitaotao.com
 
 theme:
@@ -12,9 +12,16 @@ theme:
     - navigation.path
     - navigation.top
     - navigation.path
+    - navigation.indexes
     - navigation.footer
 
+nav:
+  - Home:
+      - index.md
 
+  - Project IV:
+      - project-iv/delete-me-not.md
+      - project-iv/GDD.md
 
 markdown_extensions:
 
