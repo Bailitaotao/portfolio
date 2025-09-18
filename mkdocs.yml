@@ -15,13 +15,6 @@ theme:
     - navigation.indexes
     - navigation.footer
 
-nav:
-  - Home:
-      - index.md
-
-  - Project IV:
-      - project-iv/delete-me-not.md
-      - project-iv/GDD.md
 
 markdown_extensions:
 
